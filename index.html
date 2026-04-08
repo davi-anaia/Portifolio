@@ -373,6 +373,31 @@ footer{border-top:1px solid var(--border);padding:28px 0;display:flex;align-item
         <div style="font-size:.7rem;color:var(--sub);">Fundamentos de Python</div>
       </div>
     </div>
+
+    <!-- Cert 4 — Anthropic Claude Code in Action -->
+    <a href="https://verify.skilljar.com/c/2zhh2pqervfu" target="_blank"
+      style="background:var(--s1);border:1px solid rgba(0,212,255,.2);border-radius:16px;padding:20px;backdrop-filter:blur(20px);text-decoration:none;display:flex;align-items:center;gap:16px;transition:all .2s;"
+      onmouseover="this.style.borderColor='rgba(0,212,255,.5)';this.style.transform='translateY(-3px)'"
+      onmouseout="this.style.borderColor='rgba(0,212,255,.2)';this.style.transform='translateY(0)'">
+      <div style="width:56px;height:56px;flex-shrink:0;background:rgba(0,212,255,.08);border:1px solid rgba(0,212,255,.2);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:28px;">🤖</div>
+      <div>
+        <div style="font-size:.6rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--cyan);margin-bottom:4px;">Anthropic</div>
+        <div style="font-size:.9rem;font-weight:700;color:var(--text);margin-bottom:3px;">Claude Code in Action</div>
+        <div style="font-size:.7rem;color:var(--sub);">Verificar credencial →</div>
+      </div>
+    </a>
+
+    <!-- Cert 5 — FGV Git e GitHub -->
+    <div style="background:var(--s1);border:1px solid rgba(129,140,248,.2);border-radius:16px;padding:20px;backdrop-filter:blur(20px);display:flex;align-items:center;gap:16px;transition:all .2s;"
+      onmouseover="this.style.borderColor='rgba(129,140,248,.45)';this.style.transform='translateY(-3px)'"
+      onmouseout="this.style.borderColor='rgba(129,140,248,.2)';this.style.transform='translateY(0)'">
+      <div style="width:56px;height:56px;flex-shrink:0;background:rgba(129,140,248,.08);border:1px solid rgba(129,140,248,.2);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:28px;">🐙</div>
+      <div>
+        <div style="font-size:.6rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--purple);margin-bottom:4px;">FGV Online</div>
+        <div style="font-size:.9rem;font-weight:700;color:var(--text);margin-bottom:3px;">Introdução ao Git e GitHub</div>
+        <div style="font-size:.7rem;color:var(--sub);">15h · Nível de Atualização · s/n: 14842786</div>
+      </div>
+    </div>
   </div>
 
   <!-- CONTATO -->
@@ -497,7 +522,7 @@ function draw() {
     if(p.y>canvas.height+30) p.y=-30;
     ctx.save();
     ctx.globalAlpha=p.alpha;
-Circle){
+    if(p.isCircle){
       ctx.beginPath();
       ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
       ctx.fillStyle=p.col;
@@ -505,4 +530,13 @@ Circle){
     } else {
       ctx.font=`${p.size}px "JetBrains Mono",monospace`;
       ctx.fillStyle=p.col;
-      ctx.fillText(p.sym,p.x
+      ctx.fillText(p.sym,p.x,p.y);
+    }
+    ctx.restore();
+  });
+  requestAnimationFrame(draw);
+}
+draw();
+</script>
+</body>
+</html>
